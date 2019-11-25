@@ -1,7 +1,7 @@
 from flask import Flask
 app = Flask(__name__)
 
-import calc
+import calc, vari
 
 @app.route('/')
 def index():
