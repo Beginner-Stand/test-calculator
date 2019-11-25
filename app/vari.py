@@ -8,11 +8,11 @@ def put_var(vari):
     if vari in var_dict:
         status = 204
     var_dict[vari] = request.json['value']
-    return status
+    return '', status
 
 @app.route('/variable/<vari>', methods=['GET'])
 def get_var(vari):
     if vari in var_dict:
         return {"value": var_dict[vari]}, 200
     else:
-        return 404
+        return '', 404
