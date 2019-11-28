@@ -9,18 +9,13 @@ def put_var(vari):
     if vari in var_dict:
         status = 204
     var_dict[vari] = request.json['value']
-<<<<<<< HEAD
     return "", status
-=======
-    return '', status
->>>>>>> master
 
 @app.route('/variable/<vari>', methods=['GET'])
 def get_var(vari):
     if vari in var_dict:
         return {"value": var_dict[vari]}, 200
     else:
-<<<<<<< HEAD
         return "", 404
 
 @app.route('/variable', methods=['GET'])
@@ -46,6 +41,3 @@ def load():
                 var_dict[vari] = ndict[vari]
 
         return "",204
-=======
-        return '', 404
->>>>>>> master
